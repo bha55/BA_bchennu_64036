@@ -1,0 +1,46 @@
+---
+title: "Business Analytics- Assignement 1: Setting Up R"
+output:
+  pdf_document: default
+  html_document: default
+date: "10-02-2022"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+#install.packages("ISLR") - command executed to install ISLR package 
+library("ISLR") ##access ISLR package for current data frame.
+bharath<-Carseats #command to save carseats in a data frame- bharath
+View(bharath) #command to check data frame is executed properly
+```
+
+```{r}
+#executed to check summary of carseats
+summary(bharath)
+```
+
+```{r}
+#command to check maximum value of adversiting
+max(bharath$Advertising)
+```
+
+```{r}
+#command to check IQR of Price
+IQR(bharath$Price)
+```
+
+```{r}
+#command to plot Sales against Price
+plot(bharath$Sales, bharath$Price)
+```
+
+```{r}
+#command to check correlation between Sales and Price
+cor.test(bharath$Sales,bharath$Price)
+
+#The correlation between sales and price is Negative.
+```
